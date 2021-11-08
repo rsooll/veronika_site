@@ -1,0 +1,117 @@
+@mixin header_text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $main_color_dark;
+}
+
+@mixin header_text_1024 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $third_color;
+}
+
+@mixin white_text_title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 21px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $extra_color;
+}
+
+@mixin white_text_title_1024 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $extra_color;
+}
+
+@mixin dark_text_title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 21px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $main_color_dark;
+}
+
+@mixin dark_text_title_1024 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $main_color_dark;
+}
+
+@mixin case_help_container {
+    font-size: 22px;
+    line-height: 21px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $main_color_dark;
+}
+
+@mixin contact_text_info {
+    font-family: 'Comfortaa';
+    font-size: 15px;
+    line-height: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $main_color_dark;
+}
+
+@mixin contact_text_info_1024 {
+    font-family: 'Comfortaa';
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $main_color_dark;
+}
+
+@mixin about_text_info {
+    font-family: 'Comfortaa';
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: $main_color_dark;
+}
+
+@mixin about_text_info_1024 {
+    font-family: 'Comfortaa';
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: $main_color_dark;
+}
+
+@mixin footer_cont_text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: $main_color_dark;
+}

@@ -1,0 +1,317 @@
+// @include fotn;  - подключение миксинов; 
+// в миксине можно использовать переменные вместо точных цифр и т.д. =>color: $generalColor;
+// /@mixin font(@weight, $size) {
+//     font-size: $size;
+//     font-weight: @weight;
+// } при указании  миххина в объекте указываются конкретные параметры
+// @import ""; для импорта
+@import "../styles/mixin-pages.scss";
+@import "../styles/variables-pages.scss";
+@import url('https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap');
+
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header,
+section,
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    position: relative;
+    display: flex;
+    margin: 50px auto;
+
+    @media (max-width: 1024px) {
+        max-width: 984px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 728px;
+    }
+
+    @media (max-width: 420px) {
+        max-width: 380px;
+    }
+}
+
+// HEADER
+header {
+    background-color: $main_color;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+
+    @media (max-width:1024px) {
+        position: fixed;
+        height: 50px;
+        top: 0;
+        width: 100%;
+        background-color: $main_color;
+        border-bottom: 1px solid $extra_color;
+    }
+
+}
+
+.headerWrapper {
+    position: relative;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width:1024px) {
+        width: 984px;
+    }
+
+    @media (max-width:768px) {
+        max-width: 728px;
+    }
+
+    @media (max-width:420px) {
+        max-width: 380px;
+    }
+}
+
+
+.headerLogoContainer {
+    display: flex;
+
+    @media (max-width:1024px) {
+        position: relative;
+        z-index: 5;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 2px;
+    }
+
+    @media (max-width:420px) {
+        max-width: 380px;
+        padding-left: 3px;
+    }
+}
+
+.logo_lawyer {
+    width: 100%;
+    max-width: 50px;
+    height: 100%;
+    max-height: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media (max-width:1024px) {
+        width: 35px;
+        height: 35px;
+    }
+
+    @media (max-width:420px) {
+        display: none;
+    }
+}
+
+h1,
+.header_tel {
+    @include header_text;
+    transition-duration: 2s;
+
+    @media (max-width:1024px) {
+        position: relative;
+        @include header_text_1024;
+    }
+}
+
+h1 {
+    margin-bottom: 15px;
+
+    @media (max-width:1024px) {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+.header_tel:hover {
+    color: $extra_color;
+}
+
+.header_burger {
+    @media (max-width:1024px) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 25px;
+        z-index: 5;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $main_color_dark;
+            width: 100%;
+            height: 2px;
+            left: 0;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
+        }
+
+        span {
+            position: absolute;
+            background-color: $main_color_dark;
+            left: 0;
+            width: 100%;
+            height: 2px;
+        }
+
+    }
+}
+
+.burger_active {
+    transition-duration: 1s;
+
+    &::before {
+        transform: rotate(45deg);
+        top: 0;
+        transition-duration: 0.3s;
+        z-index: 77;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+        top: 0;
+        transition-duration: 0.3s;
+        z-index: 77;
+    }
+
+    span {
+        display: none;
+        transition-duration: 0.6s;
+    }
+
+    .navigation {
+        left: 0;
+    }
+}
+
+.navigation {
+    @media (max-width: 1024px) {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $burger_color;
+        transition-duration: .7s;
+    }
+
+    @media (max-width: 1024px) {
+        .menu {
+            width: 500px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 10px;
+            left: 10px;
+
+
+            .menuItem {
+                position: relative;
+                margin: 10px 20px 10px 0;
+                padding: 5px 0;
+                border: 2px solid $second_color_dark;
+                background-color: $third_color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                transition-duration: 0.5s;
+
+                .menuLink {
+                    width: 100%;
+                    padding: 20px;
+                    margin: 0;
+                }
+
+                &:hover {
+                    border: 2px solid $third_color;
+                    background-color: $main_color;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 550px) {
+        .menu {
+            width: calc(250px + 250 * ((100vw - 320px) / (550 - 320)));
+        }
+    }
+}
+
+.menu {
+    display: flex;
+
+    .menuItem {
+        padding-right: 20px;
+    }
+
+    @media (max-width:1024px) {
+        display: block;
+        padding-left: 30px;
+        padding-right: 0;
+
+        li {
+            padding: 30px 0 0;
+        }
+    }
+
+}
+
+.menuLink {
+    @include header_text;
+    transition-duration: 2s;
+
+    &:hover {
+        color: $extra_color;
+    }
+}
