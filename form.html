@@ -12,33 +12,41 @@
 <body>
 
     <div class="formContainer">
-        <form action="#" method="post">
+        <form action="#" method="post" class="FormForContact" id="contactForm">
 
 
 
             <ul>
-                <li><label for=""></label>
-                    <input type="text">
+                <li><label for="#name">Имя</label>
+                    <input id="name" type="text" autofocus>
                 </li>
                 <li>
-                    <label for=""></label>
-                    <input type="text">
+                    <label for="#email">Email</label>
+                    <input id="email" type="email" autocomplete="on">
                 </li>
                 <li>
-                    <label for=""></label>
-                    <input type="text">
+                    <label for="#tel">Телефон</label>
+                    <input id="tel" type="tel" maxlength="12">
                 </li>
                 <li>
-                    <label for=""></label>
-                    <input type="text">
+                    <label for="case">Сфера</label>
+                    <select name="Сфера[]" form="contactForm" id="case" size="1">
+                        <option selected value="Семейное право">Семейное право</option>
+                        <option value="Гражданское право">Гражданское право</option>
+                        <option value="Трудовое право">Трудовое право</option>
+                        <option value="Жилищное право">Жилищное право</option>
+                        <option value="Наследственное право">Наследственное право</option>
+                        <option value="Другое">Другое</option>
+                    </select>
                 </li>
                 <li>
-                    <label for=""></label>
-                    <textarea name="" id="" cols="30" rows="10">Введите ваше сообщение</textarea>
+                    <label for="#message"></label>
+                    <textarea name="messageText" id="message" cols="30" rows="10">Введите ваше сообщение</textarea>
                 </li>
             </ul>
 
-            <button>Отправить</button>
+            <button type="submit" class="formBottonSend">Отправить сообщение</button>
+            <button type="reset" class="formBottonReset">Cбросить заполнение</button>
 
         </form>
 
