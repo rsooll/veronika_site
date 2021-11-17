@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт адвоката Гродно Лейчонок В.С.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/formStyle.css">
     <meta name="author" content="адвокат Лейчонок Вероника">
     <meta name="description"
         content="Адвокат Гродно Лейчонок В.С. Сайт адвоката в Гродно Лейчонок Вероники Сергеевны. Контакты адвоката Гродно Лейчонок В.С.. Виды юридической помощи и услуг, оказываемых адвокатом в Гродно Лейчонок В.С.">
@@ -117,6 +118,68 @@
                         <address class="contact_text">Электронная почта: <a href="mailto:2893472@gmail.com"
                                 class="contact_item">2893472@gmail.com</a>
                         </address>
+
+
+                        <!-- FORM -->
+                        <div class="formWrapper">
+                            <button class="contactFormButton">Написать
+                                <div class="formContainer">
+                                    <form action="other/formPhP.php" method="post" class="contactForm" id="contactForm">
+
+                                        <h2 class="dark_text_title formHeader">Написать собщение</h2>
+                                        <legend></legend>
+                                        <fieldset>
+                                            <legend>Контактная информация</legend>
+                                            <label for="name">Имя</label>
+                                            <input id="name" type="text" autofocus placeholder="Ваше Имя" required>
+
+                                            <label for="email">Email</label>
+                                            <input id="email" type="email" autocomplete="on" placeholder="Ваш емайл"
+                                                class="tel" required>
+
+                                            <label for="tel">Телефон</label>
+                                            <input id="tel" class="telForm" type="tel" maxlength="15"
+                                                placeholder="+375XXXXXXXXX" required pattern="[+][0-9]{12,15}">
+
+                                        </fieldset>
+
+
+                                        <fieldset>
+                                            <legend>Сфера и текст сообщения</legend>
+
+
+                                            <label for="case">Сфера</label>
+                                            <select name="Сфера[]" form="contactForm" id="case" size="1">
+                                                <option selected value="Семейное право">Семейное право
+                                                </option>
+                                                <option value="Гражданское право">Гражданское право</option>
+                                                <option value="Трудовое право">Трудовое право</option>
+                                                <option value="Жилищное право">Жилищное право</option>
+                                                <option value="Наследственное право">Наследственное право
+                                                </option>
+                                                <option value="Другое">Другое</option>
+                                            </select>
+
+
+                                            <label for="message"></label>
+                                            <textarea name="messageText" id="message" class="textForm" cols="30"
+                                                rows="10" placeholder="Текст сообщения" required></textarea>
+
+                                        </fieldset>
+
+                                        <div class="buttonForm">
+                                            <input type="submit" class="formButtonSend formBotton"
+                                                value="Отправить сообщение">
+                                            <input type="reset" class="formButtonSend formBotton"
+                                                value="Очистить сообщение">
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </button>
+                            <!-- FORM FINISH -->
+                        </div>
                     </div>
                     <div class="contacts_map">
                         <iframe
@@ -160,6 +223,7 @@
 
     </div>
     <script src="js/script.js"></script>
+    <script src="js/formJS.js"></script>
 </body>
 
 </html>
