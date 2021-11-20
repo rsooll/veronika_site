@@ -1,3 +1,4 @@
+// Открывает форму +
 (function () {
     const form = document.querySelector('.contactFormButton');
     form.addEventListener('click', () => {
@@ -5,14 +6,14 @@
     });
 }());
 
+// закрывает форму -
+(function () {
+    const formWrapper = document.querySelector('.contactFormButton');
+    const closeForm = document.querySelector('.closeForm');
+
+    closeForm.addEventListener('click', () => {
+        formWrapper.classList.remove('contactFormButtonActive');
+    });
+}());
 
 
-//function checkTel() {
-//     const telNumber = document.querySelector('.tel');
-//     if (telNumber <= 13) {
-//         alert('не правильно указан номер');
-//         return false;
-//     }
-// };
-
- 

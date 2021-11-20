@@ -17,7 +17,7 @@
 .formContainer {
   position: fixed;
   top: 100px;
-  left: -100%;
+  left: -150%;
   width: 100%;
   height: 100%;
   background-color: #ffdc4093;
@@ -35,12 +35,38 @@
   left: 0;
 }
 
-.formHeader {
+.formTitle {
+  position: relative;
   font-size: 19px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.closeForm {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+.closeForm::before, .closeForm::after {
+  content: "";
+  position: absolute;
+  background-color: #052A6E;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+.closeForm::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.closeForm::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .contactForm {
+  position: relative;
   margin: 50px auto;
   max-width: 500px;
   padding: 100px;
@@ -149,4 +175,57 @@ input:required:invalid {
 
 input:required:valid {
   border: 3px solid green;
+}
+
+.buttonToTop {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 40px;
+  right: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  font-size: 35px;
+  color: #FFDB40;
+  background-color: #052A6E;
+  z-index: 30;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.buttonToTop .buttonToTopActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.buttonToTop:hover {
+  background-color: #4577D4;
+}
+@media (max-width: 768px) {
+  .buttonToTop {
+    right: 25px;
+    bottom: 45px;
+    background-color: #052a6ec0;
+  }
+}
+@media (max-width: 468px) {
+  .buttonToTop {
+    right: 25px;
+    bottom: 45px;
+    background-color: transparent;
+  }
 }

@@ -1,0 +1,118 @@
+@import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
+* {
+  scroll-behavior: smooth;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.mainWrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sliderWrapper {
+  position: relative;
+  width: 700px;
+  height: 750px;
+}
+
+.sliderBlock {
+  position: relative;
+  display: none;
+}
+
+.sliderBlockVisible,
+.VisibleSlide {
+  display: block;
+}
+
+.VisibleSlide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.sliderItemText {
+  font-size: 20px;
+  text-align: center;
+}
+
+.sliderItemIMG {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.sliderBar {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 25px;
+  width: 700px;
+  height: 50px;
+  background-color: #ffdc4093;
+}
+
+.previous,
+.next {
+  font-size: 30px;
+  cursor: pointer;
+  color: #4577D4;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.previous:hover,
+.next:hover {
+  color: #052A6E;
+}
+
+.slideNumber {
+  width: 20px;
+  height: 20px;
+  background-color: #FFDB40;
+  border: 2px solid #4577D4;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.slideNumber:hover {
+  background-color: #4577D4;
+  border: 2px solid #FFDB40;
+}
+
+.TextPages {
+  width: 700px;
+  height: 700px;
+  padding-left: 40px;
+}
