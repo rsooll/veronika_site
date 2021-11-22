@@ -26,16 +26,29 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1440px;
   margin: 0 auto;
 }
 
+.PagesTitle {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
 .sliderWrapper {
   position: relative;
-  width: 700px;
+  width: 1440px;
   height: 750px;
+}
+
+.SliderContainer {
+  position: relative;
 }
 
 .sliderBlock {
@@ -43,8 +56,7 @@
   display: none;
 }
 
-.sliderBlockVisible,
-.VisibleSlide {
+.sliderBlockVisible {
   display: block;
 }
 
@@ -54,17 +66,32 @@
   width: 100%;
 }
 
-.sliderItemText {
-  font-size: 20px;
-  text-align: center;
+.sliderItem {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sliderItemIMG {
-  width: 100%;
-  max-width: 700px;
-  height: 100%;
-  max-height: 700px;
+  width: 700px;
+  max-width: 100%;
+  height: 700px;
+  max-height: 100%;
   overflow: hidden;
+}
+
+.sliderItemText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
 }
 
 .sliderBar {
@@ -77,22 +104,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  bottom: 25px;
+  bottom: 0;
   width: 700px;
   height: 50px;
   background-color: #ffdc4093;
 }
 
-.previous,
-.next {
+.previousArrow,
+.nextArrow {
   font-size: 30px;
   cursor: pointer;
   color: #4577D4;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
-.previous:hover,
-.next:hover {
+.previousArrow:hover,
+.nextArrow:hover {
   color: #052A6E;
 }
 

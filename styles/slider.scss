@@ -18,20 +18,33 @@
 
 }
 
+
+
 .mainWrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     flex-wrap: wrap;
     max-width: 1440px;
     margin: 0 auto;
+
+}
+
+.PagesTitle {
+    margin: 0 auto;
+    padding: 30px 0;
 }
 
 .sliderWrapper {
     position: relative;
-    width: 700px;
+    width: 1440px;
     height: 750px;
 
+}
+
+.SliderContainer {
+    position: relative;
 }
 
 .sliderBlock {
@@ -40,9 +53,10 @@
 }
 
 .sliderBlockVisible,
-.VisibleSlide {
+{
     display: block;
-}
+} 
+
 
 .VisibleSlide {
     position: absolute;
@@ -50,34 +64,44 @@
     width: 100%;
 }
 
-.sliderItemText {
-    font-size: 20px;
-    text-align: center;
+.sliderItem {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+
 
 
 .sliderItemIMG {
-    width: 100%;
-    max-width: 700px;
-    height: 100%;
-    max-height: 700px;
+
+    width: 700px;
+    max-width: 100%;
+    height: 700px;
+    max-height: 100%;
     overflow: hidden;
 }
-
+.sliderItemText {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+   
+}
 
 .sliderBar {
     position: absolute;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    bottom: 25px;
+    bottom: 0;
     width: 700px;
     height: 50px;
     background-color: $burger_color;
 }
 
-.previous,
-.next {
+.previousArrow,
+.nextArrow {
     font-size: 30px;
     cursor: pointer;
     color: $main_color;
