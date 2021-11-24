@@ -30,9 +30,13 @@ const nextSlide = () => {
   if (index == sliderBlock.length - 1) {
     index = 0;
     activeSlide(index);
+    activeDotes(index);
+    // ClearDots(index);
   } else {
     index++;
     activeSlide(index);
+    activeDotes(index);
+    // ClearDots(index);
   }
 };
 
@@ -40,27 +44,35 @@ const prevSlide = () => {
   if (index == 0) {
     index = sliderBlock.length - 1;
     activeSlide(index);
+    activeDotes(index);
+    // ClearDots(index);
   } else {
     index--;
     activeSlide(index);
+    activeDotes(index);
+    // ClearDots(index);
   }
 };
+
+// const ClearDots = ind => {
+// activeSlide(ind);
+//   activeDotes(ind); 
+// };
+
 nextSlider.addEventListener('click', nextSlide);
 previousSlide.addEventListener('click', prevSlide);
 
 
 // точки внизу изменение
 
-const activeDotes = i => {
+const activeDotes = n => {
   for (dote of slideDot) {
     dote.classList.remove('slideDotActive');
   }
-  sliderBlock[i].classList.add('slideDotActive');
+  slideDot[n].classList.add('slideDotActive');
 };
 
-const ClearDots = ind => {
-  activeDotes(ind);
-};
+
 
 //клики по точкам
 
@@ -68,9 +80,13 @@ slideDot.forEach((item, indexDot) => {
   item.addEventListener('click', () => {
     index = indexDot;
     activeSlide(index);
+    activeDotes(index);
+        // или ClearDots(index);
   })
-})
+});
 
 //автоматические переходы слайда
 
-setInterval(nextSlide, 2500);
+setInterval(nextSlide, 5000);
+
+//слады при перетягивании мышью 
