@@ -1,6 +1,6 @@
 @import "../styles/mixin-pages.scss";
 @import "../styles/variables-pages.scss";
-@import url('https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap');
+@import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
 
 * {
     scroll-behavior: smooth;
@@ -15,10 +15,7 @@
     justify-content: space-between;
     padding-top: 100px;
     width: 100%;
-
 }
-
-
 
 .mainWrapper {
     position: relative;
@@ -28,23 +25,19 @@
     flex-wrap: wrap;
     max-width: 1440px;
     margin: 0 auto;
-
 }
 
 .PagesTitle {
+    // @include 
     margin: 0 auto;
     padding: 30px 0;
 }
 
-.sliderWrapper {
-    position: relative;
-    width: 1440px;
-    height: 750px;
-
-}
-
 .SliderContainer {
     position: relative;
+    max-width: 1440px;
+    max-height: 750px;
+    transition-duration: 1s;
 }
 
 .sliderBlock {
@@ -52,41 +45,34 @@
     display: none;
 }
 
-.sliderBlockVisible,
-{
-    display: block;
-} 
-
-
-.VisibleSlide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.sliderItem {
-    position: absolute;
+.sliderBlockVisible {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 
-
-
-.sliderItemIMG {
-
+.sliderIMG {
     width: 700px;
     max-width: 100%;
     height: 700px;
     max-height: 100%;
-    overflow: hidden;
 }
-.sliderItemText {
-    display: flex;
+
+.sliderText {
+    width: 700px;
+    height: 700px;
+}
+
+.sliderTextTitle {
+    margin-top: 50px;
     font-size: 20px;
     text-align: center;
-   
+}
+
+.sliderTexts {
+    padding-left: 20px;
 }
 
 .sliderBar {
@@ -100,8 +86,8 @@
     background-color: $burger_color;
 }
 
-.previousArrow,
-.nextArrow {
+.previousSlide,
+.nextSlide {
     font-size: 30px;
     cursor: pointer;
     color: $main_color;
@@ -112,7 +98,7 @@
     }
 }
 
-.slideNumber {
+.slideDot {
     width: 20px;
     height: 20px;
     background-color: $third_color;
@@ -127,8 +113,10 @@
     }
 }
 
-
-
+.slideDotActive {
+    background-color: $main_color;
+    border: 3px solid $third_color;
+}
 
 .TextPages {
     width: 700px;

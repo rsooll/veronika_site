@@ -41,14 +41,12 @@
   padding: 30px 0;
 }
 
-.sliderWrapper {
-  position: relative;
-  width: 1440px;
-  height: 750px;
-}
-
 .SliderContainer {
   position: relative;
+  max-width: 1440px;
+  max-height: 750px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .sliderBlock {
@@ -57,17 +55,7 @@
 }
 
 .sliderBlockVisible {
-  display: block;
-}
-
-.VisibleSlide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.sliderItem {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,20 +66,26 @@
       flex-wrap: wrap;
 }
 
-.sliderItemIMG {
+.sliderIMG {
   width: 700px;
   max-width: 100%;
   height: 700px;
   max-height: 100%;
-  overflow: hidden;
 }
 
-.sliderItemText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.sliderText {
+  width: 700px;
+  height: 700px;
+}
+
+.sliderTextTitle {
+  margin-top: 50px;
   font-size: 20px;
   text-align: center;
+}
+
+.sliderTexts {
+  padding-left: 20px;
 }
 
 .sliderBar {
@@ -110,20 +104,20 @@
   background-color: #ffdc4093;
 }
 
-.previousArrow,
-.nextArrow {
+.previousSlide,
+.nextSlide {
   font-size: 30px;
   cursor: pointer;
   color: #4577D4;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
-.previousArrow:hover,
-.nextArrow:hover {
+.previousSlide:hover,
+.nextSlide:hover {
   color: #052A6E;
 }
 
-.slideNumber {
+.slideDot {
   width: 20px;
   height: 20px;
   background-color: #FFDB40;
@@ -133,9 +127,14 @@
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
-.slideNumber:hover {
+.slideDot:hover {
   background-color: #4577D4;
   border: 2px solid #FFDB40;
+}
+
+.slideDotActive {
+  background-color: #4577D4;
+  border: 3px solid #FFDB40;
 }
 
 .TextPages {
