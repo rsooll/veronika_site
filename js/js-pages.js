@@ -81,7 +81,7 @@ slideDot.forEach((item, indexDot) => {
     index = indexDot;
     activeSlide(index);
     activeDotes(index);
-        // или ClearDots(index);
+    // или ClearDots(index);
   })
 });
 
@@ -90,3 +90,51 @@ slideDot.forEach((item, indexDot) => {
 setInterval(nextSlide, 5000);
 
 //слады при перетягивании мышью 
+
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchStart, false);
+
+const logBlock = document.querySelector('log-block');
+
+let x1 = null;
+let y1 = null;
+
+function handleTouchStart(event) {
+
+  const firstTouch = event.touches[0];
+  console.log(firstTouch);
+  x1 = firstTouch.clientX;
+  y1 = firstTouch.clientY;
+}
+
+function handleTouchMove(event) {
+  if (!x1 || !y1) {
+    return false;
+  }
+
+  let x2 = event.touches[0].clientX;
+  let y2 = event.touches[0].clientY;
+
+  let xDiff = x2 - x1;
+  let yDiff = y2 - y1;
+
+  //проверка смещения 
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      logBlock.textContent = ('right');
+    } else {
+      logBlock.textContent = ('left');
+    }
+  } else {
+    if (yDiff > 0) {
+      logBlock.textContent = ('down');
+    } else {
+      logBlock.textContent = ('top');
+    }
+  }
+
+
+  x1 = 0;
+  y1 = 0;
+}
