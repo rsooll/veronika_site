@@ -315,3 +315,62 @@ h1 {
         color: $extra_color;
     }
 }
+
+.main_page {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.mainWrapper_page {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.PagesTitle {
+    @include white_text_title;
+    text-align: center;
+    padding: 30px 0;
+
+    @media (max-width:1024) {
+        @include white_text_title_1024;
+    }
+
+}
+
+.TextPages {
+    margin: 20px auto;
+}
+
+.pagesCases {
+    @include case_help_container;
+    color: $extra_color;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.aboutHelp {
+    @include about_text_info;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.casesLaw li {
+    @include about_text_info;
+    padding-bottom: 15px;
+
+    &::before {
+        content: '\2705';
+    }
+}
+
+.pagesCases a {
+    margin: 20px auto;
+}

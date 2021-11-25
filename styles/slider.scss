@@ -2,36 +2,7 @@
 @import "../styles/variables-pages.scss";
 @import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
 
-* {
-    scroll-behavior: smooth;
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
 
-.main {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 100px;
-    width: 100%;
-}
-
-.mainWrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.PagesTitle {
-    // @include 
-    margin: 0 auto;
-    padding: 30px 0;
-}
 
 .SliderContainer {
     position: relative;
@@ -49,9 +20,12 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
 }
 
+.sliderTexts li {
+    margin-top: 10px;
+}
 
 .sliderIMG {
     width: 700px;
@@ -61,18 +35,33 @@
 }
 
 .sliderText {
-    width: 700px;
+    width: calc(1100px + 400 * ((100vw - 1100px) / (1440 - 1140)));
+    max-width: 700px;
     height: 700px;
 }
 
 .sliderTextTitle {
-    margin-top: 50px;
-    font-size: 20px;
+    @include about_text_info;
+    font-size: 23px;
+    color: $extra_color;
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .sliderTexts {
     padding-left: 20px;
+}
+
+.sliderTexts li {
+    @include about_text_info;
+    padding: 15px auto;
+
+    &::before {
+        content: '\2713';
+        color: $third_color;
+        padding-right: 5px;
+    }
 }
 
 .sliderBar {
@@ -119,8 +108,6 @@
 }
 
 .TextPages {
-    width: 700px;
-    height: 700px;
 
     padding-left: 40px;
 }

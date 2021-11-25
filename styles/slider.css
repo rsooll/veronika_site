@@ -1,46 +1,5 @@
+@charset "UTF-8";
 @import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
-* {
-  scroll-behavior: smooth;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.main {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 100px;
-  width: 100%;
-}
-
-.mainWrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.PagesTitle {
-  margin: 0 auto;
-  padding: 30px 0;
-}
-
 .SliderContainer {
   position: relative;
   max-width: 1440px;
@@ -62,8 +21,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+
+.sliderTexts li {
+  margin-top: 10px;
 }
 
 .sliderIMG {
@@ -74,18 +35,40 @@
 }
 
 .sliderText {
-  width: 700px;
+  width: calc(1100px + 400 * ((100vw - 1100px) / (1440 - 1140)));
+  max-width: 700px;
   height: 700px;
 }
 
 .sliderTextTitle {
-  margin-top: 50px;
-  font-size: 20px;
+  font-family: "Comfortaa";
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  color: #052A6E;
+  font-size: 23px;
+  color: #FFBC40;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .sliderTexts {
   padding-left: 20px;
+}
+
+.sliderTexts li {
+  font-family: "Comfortaa";
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  color: #052A6E;
+  padding: 15px auto;
+}
+.sliderTexts li::before {
+  content: "✓";
+  color: #FFDB40;
+  padding-right: 5px;
 }
 
 .sliderBar {
@@ -138,7 +121,5 @@
 }
 
 .TextPages {
-  width: 700px;
-  height: 700px;
   padding-left: 40px;
 }
