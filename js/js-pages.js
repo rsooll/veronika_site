@@ -87,7 +87,7 @@ slideDot.forEach((item, indexDot) => {
 
 //автоматические переходы слайда
 
-setInterval(nextSlide, 5000);
+//setInterval(nextSlide, 5000);
 
 
 
@@ -97,14 +97,91 @@ setInterval(nextSlide, 5000);
 
 
 
+// перемешать блоки со статьями в 'Полезная информация'
+
+const Articles = document.querySelector('.Articles');
+
+
+const div = document.createElement('div');
+div.className = 'lawArticle';
+Articles.prepend(div);
+
+let link = document.createElement('a');
+div.prepend(link);
+
+
+let ArticleIMG = document.createElement('img');
+ArticleIMG.className = 'ArticleIMG';
+link.prepend(ArticleIMG);
+
+let lawArticleName = document.createElement('p');
+// lawArticleName.innerHTML = '  все';
+lawArticleName.className = 'lawArticleName';
+
+link.append(lawArticleName);
+
+
+// let allImg = [{
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
+//     }]
+//   },
+//   {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
+//     }]
+//   }, {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img33.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 3 '
+//     }]
+//   },
+//   {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 4'
+//     }]
+//   }, {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img55.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 5'
+//     }]
+//   },
+//   {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 6'
+//     }]
+//   }
+// ];
+
+let allImg = [{
+    ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
+    lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
+  },
+  {
+    ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
+    lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
+  }
+]
+
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffle(allImg);
 
 
 
 
 
-
-
-// В РАЗРАБОТКЕ
+// ! В РАЗРАБОТКЕ
 (function () {
   const test = document.querySelector('.usefull');
   test.addEventListener('click', () => {

@@ -316,12 +316,17 @@ h1 {
     }
 }
 
+
 .main_page {
     position: relative;
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
     width: 100%;
+
+    @media (max-width: 1024px) {
+        padding-top: 50px;
+    }
 }
 
 .mainWrapper_page {
@@ -341,7 +346,6 @@ h1 {
 
     @media (max-width:1024) {
         @include white_text_title_1024;
-        padding: 0;
     }
 
 }
@@ -357,13 +361,14 @@ h1 {
         display: none;
     }
 }
+
 .pagesCases {
     @include case_help_container;
     color: $extra_color;
     text-align: center;
     padding: 30px 0;
 
-    
+
 }
 
 .aboutHelp {
@@ -391,4 +396,41 @@ h1 {
         justify-content: space-between;
 
     }
+}
+
+.wrapForArticles {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    left: 0;
+    margin-bottom: 20px;
+    gap: 10px 10px;
+    overflow: hidden;
+}
+
+.Articles {
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1 0 0;
+    gap: 10px 10px;
+}
+
+.lawArticle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+        width: 300px;
+    height: 320px;
+    background-color: $burger_color;
+}
+
+
+.lawArticleName {
+    text-align: center;
+}
+
+.ArticleIMG {
+    display: block;
 }

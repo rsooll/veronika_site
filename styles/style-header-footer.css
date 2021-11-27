@@ -1,5 +1,27 @@
-@charset "UTF-8";
-@import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
+.footer_cont_text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  color: #052A6E;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/comfortaa/v30/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4VrMPrQ.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9vAw.ttf) format("truetype");
+}
 * {
   scroll-behavior: smooth;
   margin: 0;
@@ -48,6 +70,28 @@ footer {
   width: 100%;
 }
 
+.white_text_title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 21px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #FFBC40;
+}
+
+.dark_text_title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 21px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #052A6E;
+}
+
 .container {
   max-width: 1440px;
   position: relative;
@@ -56,6 +100,7 @@ footer {
   display: flex;
   margin: 50px auto;
 }
+
 @media (max-width: 1024px) {
   .container {
     max-width: 984px;
@@ -71,6 +116,9 @@ footer {
     max-width: 380px;
   }
 }
+.color_section {
+  background-color: #4577D4;
+}
 
 header {
   background-color: #4577D4;
@@ -78,6 +126,7 @@ header {
   position: fixed;
   z-index: 100;
 }
+
 @media (max-width: 1024px) {
   header {
     position: fixed;
@@ -88,8 +137,7 @@ header {
     border-bottom: 1px solid #FFBC40;
   }
 }
-
-.headerWrapper {
+.header_container {
   position: relative;
   width: 1440px;
   display: -webkit-box;
@@ -104,29 +152,30 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
 @media (max-width: 1024px) {
-  .headerWrapper {
+  .header_container {
     width: 984px;
   }
 }
 @media (max-width: 768px) {
-  .headerWrapper {
+  .header_container {
     max-width: 728px;
   }
 }
 @media (max-width: 420px) {
-  .headerWrapper {
+  .header_container {
     max-width: 380px;
   }
 }
-
-.headerLogoContainer {
+.header_logo_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+
 @media (max-width: 1024px) {
-  .headerLogoContainer {
+  .header_logo_container {
     position: relative;
     z-index: 5;
     font-size: 12px;
@@ -135,12 +184,11 @@ header {
   }
 }
 @media (max-width: 420px) {
-  .headerLogoContainer {
+  .header_logo_container {
     max-width: 380px;
     padding-left: 3px;
   }
 }
-
 .logo_lawyer {
   width: 100%;
   max-width: 50px;
@@ -149,6 +197,7 @@ header {
   padding-right: 20px;
   padding-left: 20px;
 }
+
 @media (max-width: 1024px) {
   .logo_lawyer {
     width: 35px;
@@ -160,7 +209,6 @@ header {
     display: none;
   }
 }
-
 h1,
 .header_tel {
   font-family: "Roboto", sans-serif;
@@ -174,6 +222,7 @@ h1,
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
 }
+
 @media (max-width: 1024px) {
   h1,
 .header_tel {
@@ -188,17 +237,16 @@ h1,
     color: #FFDB40;
   }
 }
-
 h1 {
   margin-bottom: 15px;
 }
+
 @media (max-width: 1024px) {
   h1 {
     margin-top: 5px;
     margin-bottom: 10px;
   }
 }
-
 .header_tel:hover {
   color: #FFBC40;
 }
@@ -214,7 +262,9 @@ h1 {
     right: 10px;
     cursor: pointer;
   }
-  .header_burger::before, .header_burger::after {
+
+  .header_burger::before,
+.header_burger::after {
     content: "";
     position: absolute;
     background-color: #052A6E;
@@ -222,12 +272,15 @@ h1 {
     height: 2px;
     left: 0;
   }
+
   .header_burger::before {
     top: -8px;
   }
+
   .header_burger::after {
     top: 8px;
   }
+
   .header_burger span {
     position: absolute;
     background-color: #052A6E;
@@ -236,11 +289,11 @@ h1 {
     height: 2px;
   }
 }
-
 .burger_active {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
+
 .burger_active::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -249,6 +302,7 @@ h1 {
           transition-duration: 0.3s;
   z-index: 77;
 }
+
 .burger_active::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -257,17 +311,19 @@ h1 {
           transition-duration: 0.3s;
   z-index: 77;
 }
+
 .burger_active span {
   display: none;
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
 }
-.burger_active .navigation {
+
+.burger_active .Navigation {
   left: 0;
 }
 
 @media (max-width: 1024px) {
-  .navigation {
+  .Navigation {
     position: fixed;
     top: 50px;
     left: -100%;
@@ -279,7 +335,7 @@ h1 {
   }
 }
 @media (max-width: 1024px) {
-  .navigation .menu {
+  .Navigation .nav_menu {
     width: 500px;
     position: absolute;
     display: -webkit-box;
@@ -298,7 +354,8 @@ h1 {
     top: 10px;
     left: 10px;
   }
-  .navigation .menu .menuItem {
+
+  .Navigation .nav_menu .nav_menu_list {
     position: relative;
     margin: 10px 20px 10px 0;
     padding: 5px 0;
@@ -317,42 +374,45 @@ h1 {
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
   }
-  .navigation .menu .menuItem .menuLink {
+
+  .Navigation .nav_menu .nav_menu_list .Nav_Menu_link {
     width: 100%;
     padding: 20px;
     margin: 0;
   }
-  .navigation .menu .menuItem:hover {
+
+  .Navigation .nav_menu .nav_menu_list:hover {
     border: 2px solid #FFDB40;
     background-color: #4577D4;
   }
 }
 @media (max-width: 550px) {
-  .navigation .menu {
+  .Navigation .nav_menu {
     width: calc(250px + 250 * ((100vw - 320px) / (550 - 320)));
   }
 }
-
-.menu {
+.nav_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.menu .menuItem {
+
+.nav_menu .nav_menu_list {
   padding-right: 20px;
 }
+
 @media (max-width: 1024px) {
-  .menu {
+  .nav_menu {
     display: block;
     padding-left: 30px;
     padding-right: 0;
   }
-  .menu li {
+
+  .nav_menu li {
     padding: 30px 0 0;
   }
 }
-
-.menuLink {
+.Nav_Menu_link {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -364,59 +424,54 @@ h1 {
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
 }
-.menuLink:hover {
+
+.Nav_Menu_link:hover {
   color: #FFBC40;
 }
 
-.main_page {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 100px;
+#footer {
   width: 100%;
 }
-@media (max-width: 1024px) {
-  .main_page {
-    padding-top: 50px;
-  }
-}
 
-.mainWrapper_page {
+.footer_container {
   position: relative;
+  width: 1440px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
-.PagesTitle {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 21px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #FFBC40;
-  text-align: center;
-  padding: 30px 0;
+@media (max-width: 1024px) {
+  .footer_container {
+    max-width: 984px;
+  }
 }
-@media (max-width: 1024) {
-  .PagesTitle {
+@media (max-width: 768px) {
+  .footer_container {
+    max-width: 728px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.FooterContact {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .FooterContact .white_text_title {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -427,106 +482,80 @@ h1 {
     color: #FFBC40;
   }
 }
+@media (max-width: 768px) {
+  .FooterContact {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .FooterContact {
+    padding-left: 3px;
+  }
+}
+.socialFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-.TextPages {
-  margin: 20px auto;
+@media (max-width: 768px) {
+  .socialFooter {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 420px) {
+  .socialFooter {
+    padding-left: 3px;
+  }
+}
+.SocialIcons {
+  width: 35px;
+  height: 35px;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .SocialIcons:last-child {
+    padding-right: 0;
+  }
+}
+.footer_cont {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  color: #052A6E;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.footer_cont:hover {
+  color: #FFBC40;
+}
+
+.footer_info_title {
+  font-family: "Comfortaa", cursive;
+  font-size: 15px;
+  line-height: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #052A6E;
 }
 
 @media (max-width: 1024px) {
-  .pagesCasesTitle {
-    display: none;
+  .footer_info_title {
+    font-family: "Comfortaa", cursive;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: #052A6E;
   }
-}
-
-.pagesCases {
-  font-size: 22px;
-  line-height: 21px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #052A6E;
-  color: #FFBC40;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.aboutHelp {
-  font-family: "Comfortaa";
-  font-size: 17px;
-  line-height: 25px;
-  letter-spacing: 2px;
-  color: #052A6E;
-  font-size: 20px;
-  padding: 20px;
-}
-
-.casesLaw li {
-  font-family: "Comfortaa";
-  font-size: 17px;
-  line-height: 25px;
-  letter-spacing: 2px;
-  color: #052A6E;
-  padding-bottom: 15px;
-}
-.casesLaw li::before {
-  content: "✅";
-}
-
-.pagesCases a {
-  margin: 20px auto;
-}
-
-@media (max-width: 1024) {
-  .footer_container {
-    width: 984px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.wrapForArticles {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  left: 0;
-  margin-bottom: 20px;
-  gap: 10px 10px;
-  overflow: hidden;
-}
-
-.Articles {
-  height: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
-  gap: 10px 10px;
-}
-
-.lawArticle {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 300px;
-  height: 320px;
-  background-color: #ffdc4093;
-}
-
-.lawArticleName {
-  text-align: center;
-}
-
-.ArticleIMG {
-  display: block;
 }
