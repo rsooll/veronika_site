@@ -341,19 +341,29 @@ h1 {
 
     @media (max-width:1024) {
         @include white_text_title_1024;
+        padding: 0;
     }
 
 }
 
 .TextPages {
     margin: 20px auto;
+
 }
 
+
+.pagesCasesTitle {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
 .pagesCases {
     @include case_help_container;
     color: $extra_color;
     text-align: center;
     padding: 30px 0;
+
+    
 }
 
 .aboutHelp {
@@ -373,4 +383,12 @@ h1 {
 
 .pagesCases a {
     margin: 20px auto;
+}
+
+.footer_container {
+    @media (max-width:1024) {
+        width: 984px;
+        justify-content: space-between;
+
+    }
 }

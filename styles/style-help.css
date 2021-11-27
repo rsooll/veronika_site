@@ -420,11 +420,18 @@ h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #FFBC40;
+    padding: 0;
   }
 }
 
 .TextPages {
   margin: 20px auto;
+}
+
+@media (max-width: 1024px) {
+  .pagesCasesTitle {
+    display: none;
+  }
 }
 
 .pagesCases {
@@ -462,4 +469,13 @@ h1 {
 
 .pagesCases a {
   margin: 20px auto;
+}
+
+@media (max-width: 1024) {
+  .footer_container {
+    width: 984px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }

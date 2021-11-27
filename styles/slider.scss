@@ -4,23 +4,38 @@
 
 
 
+
 .SliderContainer {
     position: relative;
     max-width: 1440px;
     max-height: 750px;
     transition-duration: 1s;
+
+
 }
 
 .sliderBlock {
     position: relative;
     display: none;
+
+
+    @media (max-width:1024) {
+        max-width: 984px;
+        flex-wrap: wrap;
+    }
 }
 
 .sliderBlockVisible {
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
 
+    @media (max-width: 1024px) {
+        max-width: 984px;
+        flex-wrap: wrap;
+    }
 }
 
 .sliderTexts li {
@@ -28,16 +43,24 @@
 }
 
 .sliderIMG {
+
     width: 700px;
-    max-width: 100%;
     height: 700px;
-    max-height: 100%;
+    object-fit: cover;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+
 }
 
 .sliderText {
-    width: calc(1100px + 400 * ((100vw - 1100px) / (1440 - 1140)));
-    max-width: 700px;
     height: 700px;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .sliderTextTitle {
@@ -70,9 +93,14 @@
     justify-content: space-around;
     align-items: center;
     bottom: 0;
+    left: 10px;
     width: 700px;
     height: 50px;
     background-color: $burger_color;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .previousSlide,
@@ -111,3 +139,6 @@
 
     padding-left: 40px;
 }
+
+
+ 

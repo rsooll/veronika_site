@@ -95,7 +95,19 @@ setInterval(nextSlide, 5000);
 
 //слады при перетягивании мышью 
 
- 
+
+
+
+
+
+
+
 
 
 // В РАЗРАБОТКЕ
+(function () {
+  const test = document.querySelector('.usefull');
+  test.addEventListener('click', () => {
+    alert('В разработке');
+  });
+})();
