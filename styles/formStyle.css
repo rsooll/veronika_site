@@ -179,9 +179,7 @@ input:required:valid {
 
 .buttonToTop {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   bottom: 40px;
   right: 40px;
   -webkit-box-pack: center;

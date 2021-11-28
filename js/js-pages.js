@@ -99,73 +99,57 @@ slideDot.forEach((item, indexDot) => {
 
 // перемешать блоки со статьями в 'Полезная информация'
 
-const Articles = document.querySelector('.Articles');
-
-
-const div = document.createElement('div');
-div.className = 'lawArticle';
-Articles.prepend(div);
+const lawArticle = document.querySelector('.lawArticle');
 
 let link = document.createElement('a');
-div.prepend(link);
-
+lawArticle.prepend(link);
 
 let ArticleIMG = document.createElement('img');
 ArticleIMG.className = 'ArticleIMG';
+ArticleIMG.alt = 'img';
 link.prepend(ArticleIMG);
 
 let lawArticleName = document.createElement('p');
-// lawArticleName.innerHTML = '  все';
 lawArticleName.className = 'lawArticleName';
 
 link.append(lawArticleName);
 
 
-// let allImg = [{
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
-//     }]
-//   },
-//   {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
-//     }]
-//   }, {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img33.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 3 '
-//     }]
-//   },
-//   {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 4'
-//     }]
-//   }, {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img55.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 5'
-//     }]
-//   },
-//   {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 6'
-//     }]
-//   }
-// ];
-
 let allImg = [{
-    ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
-    lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
+    link: link.href = '#' [{
+      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
+      lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
+    }]
   },
   {
-    ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
-    lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
+    link: link.href = '#' [{
+      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
+      lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
+    }]
+  }, {
+    link: link.href = '#' [{
+      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img33.jpeg',
+      lawArticleName: lawArticleName.innerHTML = 'название статьи 3 '
+    }]
+  },
+  {
+    link: link.href = '#' [{
+      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
+      lawArticleName: lawArticleName.innerHTML = 'название статьи 4'
+    }]
+  }, {
+    link: link.href = '#' [{
+      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img55.jpeg',
+      lawArticleName: lawArticleName.innerHTML = 'название статьи 5'
+    }]
+  },
+  {
+    link: link.href = '#' [{
+      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
+      lawArticleName: lawArticleName.innerHTML = 'название статьи 6'
+    }]
   }
-]
+];
 
 
 function shuffle(array) {
@@ -176,6 +160,8 @@ function shuffle(array) {
 }
 
 shuffle(allImg);
+
+
 
 
 

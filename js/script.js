@@ -8,3 +8,13 @@
 }());
 
 //кнопка вверх
+
+// const buttonToTop = document.querySelector('.buttonToTop');
+
+// function toTop() {
+//     if (window.scrollY(100)) {
+//         buttonToTop.classList.add('buttonToTopActive')
+//     } else {
+//         buttonToTop.classList.remove('buttonToTopActive')
+//     }
+// }
