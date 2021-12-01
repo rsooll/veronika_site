@@ -1,10 +1,12 @@
-// бургер для видов помощи
+// бургер для видов помощи (на главное переделан более просто)
+
 (function () {
   const burger = document.querySelector(".header_burger");
   burger.addEventListener("click", () => {
     burger.classList.toggle("burger_active");
   });
 })();
+
 // СЛАЙДЕР
 
 // пременные и константы 
@@ -85,12 +87,9 @@ slideDot.forEach((item, indexDot) => {
   })
 });
 
-//автоматические переходы слайда
+// автоматические переходы слайда
 
-//setInterval(nextSlide, 5000);
-
-
-
+setInterval(nextSlide, 11000);
 
 
 //слады при перетягивании мышью 
@@ -101,88 +100,52 @@ slideDot.forEach((item, indexDot) => {
 
 
 
-// const Articles = document.querySelector('.Articles');
-
-// let link = document.createElement('a');
-// lawArticle.prepend(link);
-
-// let ArticleIMG = document.createElement('img');
-// ArticleIMG.className = 'ArticleIMG';
-// ArticleIMG.alt = 'img';
-// link.prepend(ArticleIMG);
-
-// let lawArticleName = document.createElement('p');
-// lawArticleName.className = 'lawArticleName';
-
-// link.append(lawArticleName);
-
-
-// let allImg = [{
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
-//     }]
-//   },
-//   {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
-//     }]
-//   }, {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img33.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 3 '
-//     }]
-//   },
-//   {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 4'
-//     }]
-//   }, {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img55.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 5'
-//     }]
-//   },
-//   {
-//     link: link.href = '#' [{
-//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
-//       lawArticleName: lawArticleName.innerHTML = 'название статьи 6'
-//     }]
-//   }
-// ];
-
-
-let allImg = ['img44', 'img55', 'img33'];
+//МАССИВ С ФОТО
+// let allImg = ['img44', 'img55', 'img33'];
 
 // function HelpUseful(arr, elem) { 
 //   let out = '';
 //   for (let i = 0; i < arr.length; i++) {
-//     out += `<div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/${arr[i]}.jpeg"></img> <p class="lawArticleName"><a> Блог и статьи</a></a></p> </div>`
+//     out += `<div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/${arr[i]}.jpeg"></img> <p class="lawArticleName"><a> Блог и статьи</a></p> </div>`
 //   }
 //   document.querySelector(elem).innerHTML = out;
 // }
 
-function HelpUseful(arr, elem) {
-  let out = '';
-  for (let i = 0; i < arr.length; i++) {
-    out += `<div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/${arr[i]}.jpeg"></img> <p class="lawArticleName"><a> Блог и статьи</a></a></p> </div>`
+//МАССИВ С ФОТО И ССЫЛКАМИ И Т.Д. можно добавлять еще, все доабвится на все страницы help
+
+function helpArticles() {
+  let allImg = [
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img11.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img22.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img33.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img44.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>'
+  ];
+
+  //смешать массив, что бы выводить разные фото
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
   }
-  document.querySelector(elem).innerHTML = out;
-}
-HelpUseful(allImg, '.Articles');
+  shuffle(allImg);
+
+  function HelpUseful(arr, elem) {
+    let out = '';
+    for (let i = 0; i < arr.length; i++) {
+      out += allImg[i];
+    }
+    document.querySelector(elem).innerHTML = out;
+  }
+  HelpUseful(allImg, '.Articles');
+
+};
+
+helpArticles();
 
 
-
-// function shuffle(array) {
-//   for (let i = array.length - 1; i > 0; i--) {
-//     let j = Math.floor(Math.random() * (i + 1));
-//     [array[i], array[j]] = [array[j], array[i]];
-//   }
-// }
-
-// shuffle(allImg);
 
 
 // ! В РАЗРАБОТКЕ
