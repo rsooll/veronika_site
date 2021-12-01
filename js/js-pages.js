@@ -115,12 +115,11 @@ setInterval(nextSlide, 11000);
 
 function helpArticles() {
   let allImg = [
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img11.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img22.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img33.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img44.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>'
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img11.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img22.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img33.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img44.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>'
   ];
 
   //смешать массив, что бы выводить разные фото

@@ -18,3 +18,15 @@
 //         buttonToTop.classList.remove('buttonToTopActive')
 //     }
 // }
+
+
+
+
+
+// ! В РАЗРАБОТКЕ
+(function () {
+    const test3 = document.querySelector('.contactFormButton');
+    test3.addEventListener('click', () => {
+        alert('В разработке. Воспользуйтесь другими видами связи с адвокатом');
+    });
+})();
