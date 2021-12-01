@@ -167,7 +167,7 @@ input:required:valid {
 
 .buttonToTop {
     position: fixed;
-    display: none;
+    display: flex;
     bottom: 40px;
     right: 40px;
     justify-content: center;

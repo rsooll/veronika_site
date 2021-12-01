@@ -99,72 +99,90 @@ slideDot.forEach((item, indexDot) => {
 
 // перемешать блоки со статьями в 'Полезная информация'
 
-const lawArticle = document.querySelector('.lawArticle');
-
-let link = document.createElement('a');
-lawArticle.prepend(link);
-
-let ArticleIMG = document.createElement('img');
-ArticleIMG.className = 'ArticleIMG';
-ArticleIMG.alt = 'img';
-link.prepend(ArticleIMG);
-
-let lawArticleName = document.createElement('p');
-lawArticleName.className = 'lawArticleName';
-
-link.append(lawArticleName);
 
 
-let allImg = [{
-    link: link.href = '#' [{
-      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
-      lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
-    }]
-  },
-  {
-    link: link.href = '#' [{
-      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
-      lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
-    }]
-  }, {
-    link: link.href = '#' [{
-      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img33.jpeg',
-      lawArticleName: lawArticleName.innerHTML = 'название статьи 3 '
-    }]
-  },
-  {
-    link: link.href = '#' [{
-      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
-      lawArticleName: lawArticleName.innerHTML = 'название статьи 4'
-    }]
-  }, {
-    link: link.href = '#' [{
-      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img55.jpeg',
-      lawArticleName: lawArticleName.innerHTML = 'название статьи 5'
-    }]
-  },
-  {
-    link: link.href = '#' [{
-      ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
-      lawArticleName: lawArticleName.innerHTML = 'название статьи 6'
-    }]
+// const Articles = document.querySelector('.Articles');
+
+// let link = document.createElement('a');
+// lawArticle.prepend(link);
+
+// let ArticleIMG = document.createElement('img');
+// ArticleIMG.className = 'ArticleIMG';
+// ArticleIMG.alt = 'img';
+// link.prepend(ArticleIMG);
+
+// let lawArticleName = document.createElement('p');
+// lawArticleName.className = 'lawArticleName';
+
+// link.append(lawArticleName);
+
+
+// let allImg = [{
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img11.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 1'
+//     }]
+//   },
+//   {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img22.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 2'
+//     }]
+//   }, {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img33.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 3 '
+//     }]
+//   },
+//   {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 4'
+//     }]
+//   }, {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img55.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 5'
+//     }]
+//   },
+//   {
+//     link: link.href = '#' [{
+//       ArticleIMG: ArticleIMG.src = '../assets/img/familyImg/img44.jpeg',
+//       lawArticleName: lawArticleName.innerHTML = 'название статьи 6'
+//     }]
+//   }
+// ];
+
+
+let allImg = ['img44', 'img55', 'img33'];
+
+// function HelpUseful(arr, elem) { 
+//   let out = '';
+//   for (let i = 0; i < arr.length; i++) {
+//     out += `<div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/${arr[i]}.jpeg"></img> <p class="lawArticleName"><a> Блог и статьи</a></a></p> </div>`
+//   }
+//   document.querySelector(elem).innerHTML = out;
+// }
+
+function HelpUseful(arr, elem) {
+  let out = '';
+  for (let i = 0; i < arr.length; i++) {
+    out += `<div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/familyImg/${arr[i]}.jpeg"></img> <p class="lawArticleName"><a> Блог и статьи</a></a></p> </div>`
   }
-];
-
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+  document.querySelector(elem).innerHTML = out;
 }
-
-shuffle(allImg);
-
+HelpUseful(allImg, '.Articles');
 
 
 
+// function shuffle(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+// }
 
+// shuffle(allImg);
 
 
 // ! В РАЗРАБОТКЕ
