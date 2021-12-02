@@ -1,0 +1,92 @@
+@import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
+.wrapper {
+  margin: 0 auto;
+  width: 1440px;
+}
+
+main {
+  margin-top: 120px;
+}
+@media (max-width: 1024px) {
+  main {
+    margin-top: 70px;
+  }
+}
+
+.articleName {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 21px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #FFBC40;
+  margin-bottom: 25px;
+  line-height: 40px;
+}
+@media (max-width: 1024px) {
+  .articleName {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 25px;
+  }
+}
+
+.wrapper,
+.MainArticle {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1440px;
+}
+
+.lineArt {
+  width: 300px;
+  border: 2px solid #4577D4;
+  margin: 10px 0;
+}
+
+.contactArt {
+  font-family: "Comfortaa";
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  color: #052A6E;
+  margin-bottom: 10px;
+}
+
+.Articles {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 30px 10px;
+}
+
+.lawArticle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 350px;
+  background-color: #ffdc4093;
+}
+
+.lawArticleName {
+  text-align: center;
+}
+
+.ArticleIMG {
+  display: block;
+}

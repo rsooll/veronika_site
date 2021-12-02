@@ -1,0 +1,231 @@
+@import url("https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap");
+.contactFormButton {
+  border: 3px solid #4577D4;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  color: #052A6E;
+}
+
+.formContainer {
+  position: fixed;
+  top: 100px;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffdc4093;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  z-index: 40;
+}
+@media (max-width: 1024px) {
+  .formContainer {
+    top: 50px;
+  }
+}
+
+.contactFormButtonActive .formContainer {
+  left: 0;
+}
+
+.formTitle {
+  position: relative;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.closeForm {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+.closeForm::before, .closeForm::after {
+  content: "";
+  position: absolute;
+  background-color: #052A6E;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+.closeForm::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.closeForm::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.contactForm {
+  position: relative;
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 100px;
+  border: 4px solid #4577D4;
+  border-radius: 5%;
+  background-color: #FFDB40;
+}
+@media (max-width: 550px) {
+  .contactForm {
+    padding: 10px;
+  }
+}
+
+input,
+select {
+  display: block;
+  margin: 10px auto;
+}
+
+label {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  color: #052A6E;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+input,
+textarea,
+select {
+  font: 1em sans-serif;
+  width: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #FFBC40;
+  margin-bottom: 5px;
+  background-color: #ffdc4093;
+}
+@media (max-width: 550px) {
+  input,
+textarea,
+select {
+    width: 250px;
+  }
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4577D4;
+}
+
+fieldset {
+  border: 3px solid #4577D4;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  color: #052A6E;
+}
+
+.buttonForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.formButton {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  color: #052A6E;
+  padding: 3px 10px;
+  cursor: pointer;
+  background-color: #4577D4;
+  border: 3px solid #FFBC40;
+  color: #FFDB40;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.formButton:hover {
+  background-color: #FFDB40;
+  border: 3px solid #4577D4;
+  color: #4577D4;
+}
+
+input:required:invalid {
+  border: 3px solid red;
+}
+
+input:required:valid {
+  border: 3px solid green;
+}
+
+.buttonToTop {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 40px;
+  right: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  font-size: 35px;
+  color: #FFDB40;
+  background-color: #052A6E;
+  z-index: 30;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.buttonToTop .buttonToTopActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.buttonToTop:hover {
+  background-color: #4577D4;
+}
+@media (max-width: 768px) {
+  .buttonToTop {
+    right: 25px;
+    bottom: 45px;
+    background-color: #052a6ec0;
+  }
+}
+@media (max-width: 468px) {
+  .buttonToTop {
+    right: 25px;
+    bottom: 45px;
+    background-color: transparent;
+  }
+}

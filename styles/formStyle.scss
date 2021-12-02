@@ -1,0 +1,210 @@
+@import url('https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap');
+@import './mixin-pages';
+@import './variables-pages';
+
+// form section
+
+.contactFormButton {
+    border: 3px solid $main_color;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+
+    cursor: pointer;
+    @include formText;
+
+
+}
+
+.formContainer {
+    position: fixed;
+    top: 100px;
+    left: -150%;
+
+    width: 100%;
+    height: 100%;
+    background-color: $burger_color;
+    transition-duration: .7s;
+    z-index: 40;
+
+    @media (max-width: 1024px) {
+        top: 50px;
+    }
+
+
+}
+
+//! сделать закрывающуюся форму
+
+.contactFormButtonActive {
+    .formContainer {
+        left: 0;
+    }
+}
+
+.formTitle {
+    position: relative;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.closeForm {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $main_color_dark;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+}
+
+.contactForm {
+    position: relative;
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 100px;
+    border: 4px solid $main_color;
+    border-radius: 5%;
+    background-color: $third_color;
+
+    @media (max-width: 550px) {
+        padding: 10px;
+    }
+}
+
+input,
+select {
+    display: block;
+    margin: 10px auto;
+}
+
+label {
+    @include formText;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+input,
+textarea,
+select {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 3px solid $extra_color;
+    margin-bottom: 5px;
+    background-color: $burger_color;
+
+    @media (max-width: 550px) {
+        width: 250px;
+    }
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: $main_color;
+}
+
+
+
+fieldset {
+    border: 3px solid $main_color;
+    margin-bottom: 20px;
+}
+
+legend {
+    @include formTextLegend;
+}
+
+.buttonForm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formButton {
+    @include formText;
+    padding: 3px 10px;
+    cursor: pointer;
+    background-color: $main_color;
+    border: 3px solid $extra_color;
+    color: $third_color;
+    transition-duration: 0.5s;
+
+}
+
+.formButton:hover {
+    background-color: $third_color;
+    border: 3px solid $main_color;
+    color: $main_color;
+}
+
+input:required:invalid {
+    border: 3px solid red;
+}
+
+input:required:valid {
+    border: 3px solid green;
+}
+
+
+// BUTTON TO TOP
+
+.buttonToTop {
+    position: fixed;
+    display: flex;
+    bottom: 40px;
+    right: 40px;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    width: 45px;
+    height: 45px;
+    font-size: 35px;
+    color: $third_color;
+    background-color: $main_color_dark;
+    z-index: 30;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+
+    .buttonToTopActive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        background-color: $main_color;
+    }
+
+    @media (max-width: 768px) {
+        right: 25px;
+        bottom: 45px;
+        background-color: $main_color_dark2;
+
+    }
+
+    @media (max-width: 468px) {
+        right: 25px;
+        bottom: 45px;
+        background-color: transparent;
+
+    }
+}

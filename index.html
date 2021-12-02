@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт адвоката Гродно Лейчонок В.С.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/formStyle.css">
     <meta name="author" content="адвокат Лейчонок Вероника">
     <meta name="description"
         content="Адвокат Гродно Лейчонок В.С. Сайт адвоката в Гродно Лейчонок Вероники Сергеевны. Контакты адвоката Гродно Лейчонок В.С.. Виды юридической помощи и услуг, оказываемых адвокатом в Гродно Лейчонок В.С.">
@@ -35,7 +36,7 @@
                             <li class="nav_menu_list"><a href="#help_section" class="Nav_Menu_link">Виды юридической
                                     помощи</a></li>
                             <li class="nav_menu_list"><a href="#contact_section" class="Nav_Menu_link">Контакты</a></li>
-                            <li class="nav_menu_list"><a href="" class="Nav_Menu_link">Блог</a></li>
+                            <li class="nav_menu_list"><a href="articles/Blog.html" class="Nav_Menu_link">Блог</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,7 +61,7 @@
                         <p class="about_text">В настоящее время являюсь адвокатом юридической консультации
                             Октябрьского района г. Гродно.</p>
                         <p class="about_text">Постоянно совершенствую свои знания. Постоянно прохожу курсы
-                            повешения
+                            повышения
                             квалификации.</p>
                         <h3 class="about_text_title">Обращаясь за оказанием юридической помощи ко мне Вы получите
                         </h3>
@@ -78,6 +79,12 @@
                 </div>
 
             </section>
+            <!-- BUtton TO TOP -->
+
+            <a href="#about_section" class="buttonToTop">
+                &#8593;</a>
+
+
 
             <!-- HELP -->
 
@@ -86,13 +93,18 @@
                     <h2 class="dark_text_title help_title">Виды юридической помощи</h2>
                     <div class="cases_list_container">
                         <ul class="cases_list">
-                            <li class="cases"><a href="#" class="case">Гражданские дела</a></li>
+                            <li class="cases"><a href="help pages/civilians_disputes.html" class="case">Гражданские
+                                    дела</a></li>
                             <li class="cases"> <a href="help pages/family_disputes.html" class="case">Семейные дела</a>
                             </li>
-                            <li class="cases"><a href="#" class="case">Административные дела</a></li>
-                            <li class="cases"><a href="#" class="case">Жилищные дела</a></li>
-                            <li class="cases"><a href="#" class="case">Наследственные дела</a></li>
-                            <li class="cases"><a href="#" class="case">Трудовые дела</a></li>
+                            <li class="cases"><a href="help pages/administrative_disputes.html"
+                                    class="case">Административные дела</a></li>
+                            <li class="cases"><a href="help pages/housing_disputes.html" class="case">Жилищные дела</a>
+                            </li>
+                            <li class="cases"><a href="help pages/hereditary_disputes.html" class="case">Наследственные
+                                    дела</a></li>
+                            <li class="cases"><a href="help pages/other_disputes.html" class="case">Другие категории
+                                    дел</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,6 +129,73 @@
                         <address class="contact_text">Электронная почта: <a href="mailto:2893472@gmail.com"
                                 class="contact_item">2893472@gmail.com</a>
                         </address>
+
+
+                        <!-- FORM -->
+                        <div class="formWrapper">
+                            <button class="contactFormButton">Написать
+                                <div class="formContainer">
+                                    <form action="#" method="post" class="contactForm" id="contactForm">
+
+
+
+
+
+                                        <h2 class="dark_text_title formTitle">Написать собщение <span
+                                                class="closeForm"></span> </h2>
+                                        <!-- ! сделать закрывающуюся форму -->
+                                        <fieldset>
+                                            <legend>Контактная информация</legend>
+                                            <label for="name">Имя</label>
+                                            <input id="name" type="text" autofocus placeholder="Ваше Имя" required>
+
+                                            <label for="email">Email</label>
+                                            <input id="email" type="email" autocomplete="on" placeholder="Ваш емайл"
+                                                class="tel" required>
+
+                                            <label for="tel">Телефон</label>
+                                            <input id="tel" class="telForm" type="tel" maxlength="15"
+                                                placeholder="+375XXXXXXXXX" required pattern="[+][0-9]{12,15}">
+
+                                        </fieldset>
+
+
+                                        <fieldset>
+                                            <legend>Сфера и текст сообщения</legend>
+
+
+                                            <label for="case">Сфера</label>
+                                            <select name="Сфера[]" form="contactForm" id="case" size="1">
+                                                <option selected value="Семейное право">Семейное право
+                                                </option>
+                                                <option value="Гражданское право">Гражданское право</option>
+                                                <option value="Трудовое право">Трудовое право</option>
+                                                <option value="Жилищное право">Жилищное право</option>
+                                                <option value="Наследственное право">Наследственное право
+                                                </option>
+                                                <option value="Другое">Другое</option>
+                                            </select>
+
+
+                                            <label for="message"></label>
+                                            <textarea name="messageText" id="message" class="textForm" cols="30"
+                                                rows="10" placeholder="Текст сообщения" required></textarea>
+
+                                        </fieldset>
+
+                                        <div class="buttonForm">
+                                            <input type="submit" class="formButtonSend formBotton"
+                                                value="Отправить сообщение">
+                                            <input type="reset" class="formButtonSend formBotton"
+                                                value="Очистить сообщение">
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </button>
+                            <!-- FORM FINISH -->
+                        </div>
                     </div>
                     <div class="contacts_map">
                         <iframe
@@ -160,6 +239,7 @@
 
     </div>
     <script src="js/script.js"></script>
+    <script src="js/formJS.js"></script>
 </body>
 
 </html>

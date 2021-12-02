@@ -115,3 +115,25 @@
     letter-spacing: 2px;
     color: $main_color_dark;
 }
+
+
+@mixin formText {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: $main_color_dark;
+
+}
+
+@mixin formTextLegend {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: $main_color_dark;
+}
