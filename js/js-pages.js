@@ -148,9 +148,9 @@ helpArticles();
 
 
 // ! В РАЗРАБОТКЕ
-(function () {
-  const test = document.querySelector('.usefull');
-  test.addEventListener('click', () => {
-    alert('В разработке');
-  });
-})();
+// (function () {
+//   const test = document.querySelector('.usefull');
+//   test.addEventListener('click', () => {
+//     alert('В разработке');
+//   });
+// })();
