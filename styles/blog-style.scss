@@ -1,0 +1,83 @@
+@import url('https: //fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto:wght@500&display=swap');
+@import './mixin-pages';
+@import './variables-pages';
+
+.wrapper {
+    margin: 0 auto;
+    width: 1440px;
+}
+
+main {
+    margin-top: 120px;
+
+    @media (max-width: 1024px) {
+        margin-top: 70px;
+    }
+}
+
+.articleName {
+    text-align: center;
+    @include white_text_title;
+    margin-bottom: 25px;
+    line-height: 40px;
+
+    @media (max-width: 1024px) {
+        font-size: 20px;
+        margin-bottom: 15px;
+        line-height: 25px;
+    }
+}
+
+
+.wrapper,
+.MainArticle {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1440px;
+
+}
+
+
+
+.lineArt {
+    width: 300px;
+    border: 2px solid $main_color;
+    margin: 10px 0;
+}
+
+.contactArt {
+    @include about_text_info;
+    margin-bottom: 10px;
+}
+
+// другие статьи 
+
+
+
+
+.Articles {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 10px;
+}
+
+.lawArticle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    background-color: $burger_color;
+}
+
+
+.lawArticleName {
+    text-align: center;
+}
+
+.ArticleIMG {
+    display: block;
+}

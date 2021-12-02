@@ -118,9 +118,9 @@ function helpArticles() {
     '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img11.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
     '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img22.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
     '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img33.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-    '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img44.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
+    '<a href="../articles/ДОПОЛНИТЕЛЬНЫЕ РАСХОДЫ НА СОДЕРЖАНИЕ РЕБЕНКА.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img44.jpeg"></img> <p class="lawArticleName">  Дополнительные расходы на содержание ребенка</p> </div></a>',
     '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>'
-  ];
+  ]; //ДУБЛИРОВАТЬ В js-pages.js и  blog-js.js
 
   //смешать массив, что бы выводить разные фото
   function shuffle(array) {
