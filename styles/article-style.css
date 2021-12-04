@@ -160,3 +160,20 @@ main {
 .ArticleIMG {
   display: block;
 }
+
+.artIMG {
+  display: block;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (max-width: 800px) {
+  .artIMG {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  figure {
+    display: none;
+  }
+}
