@@ -12,7 +12,8 @@ function helpArticles() {
     //ДУБЛИРОВАТЬ В js-pages.js и  blog-js.js и  js-articles.js
     let allImg = [
         '<a href="../articles/ДОПОЛНИТЕЛЬНЫЕ РАСХОДЫ НА СОДЕРЖАНИЕ РЕБЕНКА.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/art1.webp"></img> <p class="lawArticleName">  Дополнительные расходы на содержание ребенка</p> </div></a>',
-        '<a href="../articles/Приобретение права собственности на безнадзорных животных.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/art2.webp"></img> <p class="lawArticleName">  Приобретение права собственности на безнадзорных животных</p> </div></a>'
+        '<a href="../articles/Приобретение права собственности на безнадзорных животных.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/art2.webp"></img> <p class="lawArticleName">  Приобретение права собственности на безнадзорных животных</p> </div></a>',
+        '<a href="../articles/3-Право собственности на доходы, полученные после расторжения брака.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/3-blog.webp"></img> <p class="lawArticleName">  Право собственности на доходы, полученные после расторжения брака от использования имущества</p> </div></a>'
     ];
 
     //смешать массив, что бы выводить разные фото
