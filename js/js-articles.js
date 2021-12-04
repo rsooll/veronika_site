@@ -7,15 +7,12 @@
     });
 }());
 
-// СМЕШАТЬ ВНИЗУ СТАТЬИ
+// СМЕШАТЬ ВНИЗУ СТАТЬИ//ДУБЛИРОВАТЬ В js-pages.js и  blog-js.js js-articles.js    let allImg =
 function helpArticles() {
-   //ДУБЛИРОВАТЬ В js-pages.js и  blog-js.js
+    //ДУБЛИРОВАТЬ В js-pages.js и  blog-js.js и  js-articles.js
     let allImg = [
-        '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img11.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-        '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img22.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-        '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img33.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>',
-        '<a href="../articles/ДОПОЛНИТЕЛЬНЫЕ РАСХОДЫ НА СОДЕРЖАНИЕ РЕБЕНКА.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img44.jpeg"></img> <p class="lawArticleName">  Дополнительные расходы на содержание ребенка</p> </div></a>',
-        '<a href="#"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/img55.jpeg"></img> <p class="lawArticleName">  Блог и статьи</p> </div></a>'
+        '<a href="../articles/ДОПОЛНИТЕЛЬНЫЕ РАСХОДЫ НА СОДЕРЖАНИЕ РЕБЕНКА.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/art1.webp"></img> <p class="lawArticleName">  Дополнительные расходы на содержание ребенка</p> </div></a>',
+        '<a href="../articles/Приобретение права собственности на безнадзорных животных.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/art2.webp"></img> <p class="lawArticleName">  Приобретение права собственности на безнадзорных животных</p> </div></a>'
     ];
 
     //смешать массив, что бы выводить разные фото
@@ -41,4 +38,5 @@ function helpArticles() {
 helpArticles();
 
 
-// L
+// дата публикации
+document.querySelectorAll('.date').innerHTML = document.lastModified;
