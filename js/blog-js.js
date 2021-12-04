@@ -16,7 +16,9 @@ function helpArticles() {
         '<a href="../articles/3-Право собственности на доходы, полученные после расторжения брака.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/3-blog.webp"></img> <p class="lawArticleName">  Право собственности на доходы, полученные после расторжения брака от использования имущества</p> </div></a>',
         '<a href="../articles/4-Лишение родительских прав.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/4-blog.webp"></img> <p class="lawArticleName">  Лишение родительских прав</p> </div></a>',
         '<a href="../articles/5-Порядок взыскания алиментов в пользу нетрудоспособного родителя.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/5-blog.webp"></img> <p class="lawArticleName"> Порядок взыскания алиментов в пользу нетрудоспособного родителя</p> </div></a>',
-        '<a href="../articles/6-Порядок расторжения брака.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/6-blog.webp"></img> <p class="lawArticleName"> Порядок расторжения брака</p> </div></a>'
+        '<a href="../articles/6-Порядок расторжения брака.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/6-blog.webp"></img> <p class="lawArticleName"> Порядок расторжения брака</p> </div></a>',
+        '<a href="../articles/7-Своевременное обращение за оказанием юридической помощи.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/7-blog.webp"></img> <p class="lawArticleName">Своевременное обращение за оказанием юридической помощи</p> </div></a>',
+        '<a href="../articles/8-Определение места жительства несовершеннолетнего ребенка.html"  alt="ArticleIMG"><div class="lawArticle"> <img class="ArticleIMG" src="../assets/img/articles/8-blog.webp"></img> <p class="lawArticleName">Определение места жительства несовершеннолетнего ребенка</p> </div></a>'
     ];
 
     //смешать массив, что бы выводить разные фото
